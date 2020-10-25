@@ -8,7 +8,7 @@ body,
 html {
    margin: 0;
    padding: 0;
-   // overflow: hidden;
+   overflow: auto;
 }
 
 // Export image overlay
@@ -90,12 +90,10 @@ html {
    align-items: center;
    flex-direction: column;
 
-   // border: 5px solid red;
    canvas {
       width: 100%;
       height: 100%;
       cursor: crosshair;
-      // border: 5px solid red;
    }
 
    .tools {
@@ -107,13 +105,15 @@ html {
       justify-content: space-evenly;
       align-items: center;
       border-radius: 5px;
-      box-shadow: 3px 3px 10px rgba(50, 50, 50, 0.25);
       transform: translateY(-60px);
+      border: 2px solid #000;
 
       >* {
-         width: 50px;
-         height: 100%;
-         border: .1px solid #ddd;
+         width: 45px;
+         height: 40px;
+         border-left: 1px solid #ddd;
+         border-right: 1px solid #ddd;
+         padding: 5px;
          cursor: pointer;
          display: flex;
          justify-content: center;
@@ -197,7 +197,6 @@ html {
       }
 
       &__stroke-width {
-         // width: 200px;
          width: auto;
 
          >* {
@@ -206,10 +205,7 @@ html {
             background-color: #000;
          }
 
-         input {
-            // width: 85%;
-            // // width: auto;
-         }
+         input {}
 
          .little-brush {
             min-width: 10px;
